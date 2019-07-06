@@ -1,7 +1,4 @@
 var html = '';
-var red;
-var green;
-var blue;
 var rgbColor;
 
 function generateRandomValue() {
@@ -9,13 +6,14 @@ function generateRandomValue() {
 }
 
 function generateRandomColor() {
-  return 'rgb(' + red + ',' + green + ',' + blue + ')';
+  var color = 'rgb(';
+  color += generateRandomValue() + ',';
+  color += generateRandomValue() + ',';
+  color += generateRandomValue() + ')';
+  return color;
 }
 
 for (var i = 1; i <= 10; i++) {
-  red = generateRandomValue();
-  green = generateRandomValue();
-  blue = generateRandomValue();
   rgbColor = generateRandomColor();
   html += '<div style="background-color:' + rgbColor + '"></div>';
 }
