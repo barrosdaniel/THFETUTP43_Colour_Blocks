@@ -8,11 +8,15 @@ function generateRandomValue() {
   return Math.floor(Math.random() * 256);
 }
 
+function generateRandomColor() {
+  return 'rgb(' + red + ',' + green + ',' + blue + ')';
+}
+
 for (var i = 1; i <= 10; i++) {
   red = generateRandomValue();
   green = generateRandomValue();
   blue = generateRandomValue();
-  rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  rgbColor = generateRandomColor();
   html += '<div style="background-color:' + rgbColor + '"></div>';
 }
 
