@@ -13,9 +13,13 @@ function generateRandomColor() {
   return color;
 }
 
+function print(message) {
+  document.write(message);
+}
+
 for (var i = 1; i <= 10; i++) {
   rgbColor = generateRandomColor();
   html += '<div style="background-color:' + rgbColor + '"></div>';
 }
 
-document.write(html);
+print(html);
